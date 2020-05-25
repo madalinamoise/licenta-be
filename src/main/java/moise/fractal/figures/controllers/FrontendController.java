@@ -20,6 +20,5 @@ public class FrontendController {
     public List<RepositoryResponse> getGitRepositoryData(@PathVariable String username, @PathVariable String repository){
         String repositoryPath = username + '/' + repository;
         return client.getRepositoryContent(new Repository(repositoryPath));
-//        client.getFileContributors("FlorinMsg", "TeamFixers", "src/main/java/fixers/jBugger/BusinessLogic/BugEJB.java");
     }
 }
