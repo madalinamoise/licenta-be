@@ -56,9 +56,6 @@ public class GithubClient {
 
         if ("dir".equals(content.getType())) {
             String repoUrl = GITHUB_API_URL + "/repos/" + repository.getFullName() + "/contents/" + content.getPath();
-//            ResponseEntity<RepositoryContentResponse> contentResponse = template.exchange(repoUrl, HttpMethod.GET, new HttpEntity<>("", headers), RepositoryContentResponse.class);
-//            contentResponse.getBody().getRepositoryContentList().forEach(cnt -> parseRepositoryContent(repository, cnt));
-//            System.out.println(content.getName() + ":" + repoUrl);
             response.setRepoUrl(repoUrl);
 
         } else if ("file".equals(content.getType())) {
